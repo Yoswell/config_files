@@ -1,0 +1,420 @@
+Commands for grep in linux
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Command                                              | Description                                                                                                              |
+-----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------
+alias                                                | Crear un atajo para otros comandos y opciones de comando
+alias hh=’history’                                   | colocar un alias para un commando –hh= Historial
+apt-cache search searched-package                    | retorna lista de paquetes que corresponde a la serie «paquetes buscados»
+apt-cdrom install package_name                       | instalar / actualizar un paquete deb desde un cdrom
+apt-get check                                        | verificar la correcta resolución de las dependencias
+apt-get clean                                        | limpiar cache desde los paquetes descargados
+apt-get install package_name                         | instalar / actualizar un paquete deb
+apt-get remove package_name                          | eliminar un paquete deb del sistema
+apt-get update                                       | actualizar la lista de paquetes
+apt-get upgrade                                      | actualizar todos los paquetes instalados
+apt                                                  | Instalar, eliminar y gestionar paquetes en distribuciones basadas en Debian
+arch                                                 | mostrar la arquitectura de la máquina
+apropos                                              | Sirve para buscar entre las páginas del manual y las descripciones
+badblocks -v /dev/hda1                               | Chequear los bloques defectuosos en el disco hda1
+bg                                                   | Pone un proceso en segundo plano
+bunzip2 file1.bz2                                    | descomprime in fichero llamado ‘file1.bz2’
+bzip2 file1                                          | comprime un fichero llamado ‘file1’
+cal 07 2011                                          | mostrar el almanaque para el mes julio de 2011
+cal 2011                                             | mostrar el almanaque de 2011
+cal                                                  | mostrar un calendario en el terminal
+cat file1                                            | ver los contenidos de un fichero comenzando desde la primera hilera
+cat /proc/cpuinfo                                    | mostrar información de la CPU
+cat /proc/interrupts                                 | mostrar las interrupciones
+cat /proc/meminfo                                    | verificar el uso de memoria
+cat /proc/mounts                                     | mostrar el sistema de ficheros montado
+cat /proc/net/dev                                    | mostrar adaptadores de red y estadísticas
+cat /proc/swaps                                      | mostrar ficheros swap
+cat /proc/version                                    | mostrar la versión del kernel
+cd /home                                             | entrar en el directorio “home”
+cd                                                   | ir al directorio raíz
+cd –                                                 | ir (regresar) al directorio anterior
+cd                                                   | Navegar por los directorios de Linux
+cd ../../                                            | retroceder 2 niveles
+cd ..                                                | retroceder un nivel
+cd ~user1                                            | ir al directorio user1
+chage -E 2011-12-31 user1                            | colocar un plazo para la contraseña del usuario, En este caso dice que la clave expira el 31 de diciembre de 2011
+chattr +a file1                                      | permite escribir abriendo un fichero solamente modo append
+chattr +c file1                                      | permite que un fichero sea comprimido / descomprimido automaticamente
+chattr +d file1                                      | asegura que el programa ignore borrar los ficheros durante la copia de seguridad
+chattr +i file1                                      | convierte el fichero en invariable, por lo que no puede ser eliminado, alterado, renombrado, ni enlazado
+chattr +S file1                                      | asegura que un fichero sea modificado, los cambios son escritos en modo synchronous como con sync
+chattr +s file1                                      | permite que un fichero sea borrado de forma segura
+chattr +u file1                                      | te permite recuperar el contenido de un fichero aún si este está cancelado
+chgrp group1 file1                                   | cambiar grupo de ficheros
+chmod go-rwx directory1                              | quitar permiso de lectura ®, escritura (w) y (x) ejecución al grupo (g) y otros (o) sobre el directorio ‘directory1’
+chmod g+s /home/public                               | colocar un bit SGID en un directorio –similar al SUID pero por directorio
+chmod g-s /home/public                               | desabilitar un bit SGID en un directorio
+chmod                                                | modificar los permisos de lectura, escritura y ejecución de un archivo o directorio
+chmod o+t /home/public                               | colocar un bit STIKY en un directorio, Permite el borrado de ficheros solamente a los dueños legítimos
+chmod o-t /home/public                               | desabilitar un bit STIKY en un directorio
+chmod ugo+rwx directory1                             | colocar permisos de lectura ®, escritura (w) y ejecución(x) al propietario (u), al grupo (g) y a otros (o) sobre el directorio ‘directory1’
+chmod u+s /bin/file1                                 | colocar el bit SUID en un fichero binario, El usuario que corriendo ese fichero adquiere los mismos privilegios como dueño
+chmod u-s /bin/file1                                 | deshabilitar el bit SUID en un fichero binario
+chown                                                | cambiar la propiedad de un archivo, directorio o enlace simbólico a otro nombre de usuario
+chown -R user1 directory1                            | cambiar el propietario de un directorio y de todos los ficheros y directorios contenidos dentro
+chown user1 file1                                    | cambiar el dueño de un fichero
+chown user1                                          | group1 file1  cambiar usuario y el grupo propietario de un fichero
+chsh                                                 | cambiar el comando Shell
+chsh –list-shells                                    | es un comando adecuado para saber si tienes que hacer remoto en otra terminal
+clear                                                | limpiar la pantalla del terminal
+clock -w                                             | guardar los cambios de fecha en la BIOS
+cmp                                                  | verificar si 2 archivos son idénticos
+comm                                                 | combinar las funcionalidad de los comandos diff y cmp
+cp -a dir1                                           | copiar un directorio
+cp -a dir1 dir2                                      | copiar dos directorio al unísono
+cp                                                   | copiar y pegar archivos, contenido, carpetas y directorios
+cp file1                                             | copiar un fichero
+cp file1 file2                                       | copiar dos ficheros al unísono
+curl                                                 | Descarga archivos de Internet o envía solicitudes HTTP
+Ctrl + c                                             | finaliza el comando actualmente en ejecución
+Ctrl + e                                             | ir al final de la línea
+!!                                                   | vuelve a emitir el último comando que se ejecutó
+date                                                 | mostrar la fecha del sistema
+df -h                                                | mostrar una lista de las particiones montadas
+dhclient eth0                                        | activar la interface ‘eth0’ en modo dhcp
+diff                                                 | comparar el contenido de 2 archivos para encontrar las partes del contenido que no coinciden
+d                                                    | informar del consumo de espacio de disco del sistema
+dmidecode -q                                         | mostrar los componentes (hardware) del sistema
+dos2unix filedos.txt fileunix.txt                    | convertir un formato de fichero texto desde MSDOS a UNIX
+dosfsck /dev/hda1                                    | reparar / chequear la integridad de un fichero del sistema dos en el disco hda1
+dpkg –contents package.deb                           | mostrar lista de ficheros dados por un paquete no instalado todavía
+dpkg -i package.deb                                  | instalar / actualizar un paquete deb
+dpkg -l | grep httpd                                 | mostrar todos los paquetes deb con el nombre “httpd”
+dpkg -l                                              | mostrar todos los paquetes deb instalados en el sistema
+dpkg -L package_name                                 | mostar lista de ficheros dados por un paquete instalado en el sistema
+dpkg -r package_name                                 | eliminar un paquete deb del sistema
+dpkg -S /bin/ping                                    | verificar cuál paquete pertenece a un fichero dado
+dpkg -s package_name                                 | obtener información en un paquete específico instalado en el sistema
+du -sh dir1                                          | Estimar el espacio usado por el directorio ‘dir1’
+du -sk * | sort -rn                                  | mostrar el tamaño de los ficheros y directorios ordenados por tamaño
+du                                                   | verificar cuánto espacio de almacenamiento ocupa una carpeta o directorio
+e2fsck /dev/hda1                                     | reparar / chequear la integridad del fichero del sistema ext 2 en el disco hda1
+e2fsck -j /dev/hda1                                  | reparar / chequear la integridad del fichero del sistema ext 3 en el disco hda1
+echo “1” > /proc/sys/net/ipv4/ip_forward             | activar el recorrido ip
+echo                                                 | mostrar una línea de texto o cadena de caracteres en el terminal
+env                                                  | muestra las variables de entorno disponibles.
+ethtool eth0                                         | mostrar las estadísticas de tarjeta de red ‘eth0’
+exit                                                 | salir de la sesión del intérprete de comandos en curso
+export                                               | establece una variable de entorno para su uso en el shell
+ftp                                                  | Transfiere archivos a través de una conexión FTP
+fdformat -n /dev/fd0                                 | formatear un disco flooply
+fg                                                   | Pone un proceso en primer plano
+file file1                                           | salida (volcado en pantalla) del tipo mime de un fichero texto
+find                                                 | buscar archivos directamente desde la línea de comandos
+find / -name file1                                   | buscar fichero y directorio a partir de la raíz del sistema
+find / -name \*,rpm                                  | buscar ficheros con extensión ‘,rpm’ y modificar permisos
+find / -perm -u+s                                    | visualizar todos los ficheros del sistema con SUID configurado
+find / -user user1                                   | buscar ficheros y directorios pertenecientes al usuario ‘user1’
+find / -xdev -name \*,rpm                            | buscar ficheros con extensión ‘,rpm’ ignorando los dispositivos removibles como cdrom, pen-drive, etc
+find . -type d | grep direct                         | buscar directorios en la ruta actual con posibles nombres coincidentes con la palabra direct ejemplo de directorios  (direct1, direct2, direct3)
+find . -type f | grep file                           | buscar archivos en la ruta actual con posibles nombres coincidentes con la palabra file ejemplo de archivos  (file1, file2, file3)
+find . -type f | grep file | xargs chmod -x          | quitar permisos a archivos en la ruta actual con posibles nombres coincidentes con la palabra file ejemplo de archivos  (file1, file2, file3)
+find . -type f | grep file | xargs mv -t direct      | mover archivos en la ruta actual con posibles nombres coincidentes con la palabra file ejemplo de archivos  (file1, file2, file3) al directorio direct
+find . -type f | grep file | xargs cp -t direct      | copiar archivos en la ruta actual con posibles nombres coincidentes con la palabra file ejemplo de archivos  (file1, file2, file3) al directorio direct
+free -m                                              | muestra el estado de la RAM en megabytes
+free                                                 | mostrar un resumen del consumo de memoria
+fsck /dev/hda1                                       | reparar / chequear la integridad del fichero del sistema Linux en el disco hda1
+fsck.ext2 /dev/hda1                                  | reparar / chequear la integridad del fichero del sistema ext 2 en el disco hda1
+fsck.ext3 /dev/hda1                                  | reparar / chequear la integridad del fichero del sistema ext 3 en el disco hda1
+fsck.msdos /dev/hda1                                 | reparar / chequear la integridad de un fichero del sistema dos en el disco hda1
+fsck.vfat /dev/hda1                                  | reparar / chequear la integridad del fichero sistema fat en el disco hda1
+fuser -km /mnt/hda2                                  | forzar el desmontaje cuando el dispositivo está ocupado
+gpg -c file1                                         | codificar un fichero con guardia de seguridad GNU
+gpg file1.gpg                                        | decodificar un fichero con Guardia de seguridad GNU
+grep [0-9] /var/log/messages                         | seleccionar todas las líneas del fichero ‘/var/log/messages’ que contienen números
+grep Aug -R /var/log/*                               | buscar la cadena “Aug” en el directorio ‘/var/log’ y debajo
+grep Aug /var/log/messages                           | buscar palabras “Aug” en el fichero ‘/var/log/messages’
+grep ^Aug /var/log/messages                          | buscar palabras que comienzan con “Aug” en fichero ‘/var/log/messages’
+grep                                                 | encontrar contenido dentro de archivos
+groupadd nombre_del_grupo                            | crear un nuevo grupo
+groupdel nombre_del_grupo                            | borrar un grupo
+grpck                                                | chequear la sintaxis correcta y el formato del fichero ‘/etc/group’ y la existencia de grupos
+gunzip file1.gz                                      | descomprime un fichero llamado ‘file1.gz’
+gzip -9 file1                                        | comprime con compresión máxima
+gzip file1                                           | comprime un fichero llamado ‘file1’
+halt                                                 | apagar el sistema
+hdparm -i /dev/hda                                   | mostrar las características de un disco duro
+hdparm -tT /dev/sda                                  | realizar prueba de lectura en un disco duro
+head -2 file1                                        | ver las dos primeras líneas de un fichero
+head                                                 | mostrar las primeras 10 líneas de un texto
+history                                              | mostrar una lista de los comandos ejecutados en el pasado
+history -c                                           | elimina el historial de comandos
+hostname                                             | conocer el nombre del host del sistema
+hostname                                             | mostrar el nombre del host del sistema
+host www.example.com                                 | buscar el nombre del host para resolver el nombre a una dirección ip(1)
+htop                                                 | monitorizar los recursos del sistema y los procesos del servidor en tiempo real
+iconv -l                                             | listas de cifrados conocidos
+ifconfig eth0 192.168.1.1 netmask 255.255.255.0      | configurar una dirección IP
+ifconfig eth0                                        | mostrar la configuración de una tarjeta de red Ethernet
+ifconfig eth0 promisc                                | configurar ‘eth0’en modo común para obtener los paquetes (sniffing)
+ifconfig                                             | mostrar una lista de todas las interfaces de red junto con las direcciones IP y MAC, y otra información adicional
+ifdown eth0                                          | deshabilitar una interface ‘eth0’
+ifup eth0                                            | activar una interface ‘eth0’
+init 0                                               | apagar el sistema
+ip                                                   | configurar interfaces de red
+ip link show                                         | mostar el estado de enlace de todas las interfaces
+iptables -t filter -F                                | limpiar todas las reglas de la tabla de filtro
+iptables -t filter -L                                | mostrar todas las cadenas de la tabla de filtro
+iptables -t filter -X                                | borrar cualquier cadena creada por el usuario
+iptables -t nat -F                                   | limpiar todas las reglas de la tabla nat
+iptables -t nat -L                                   | mostrar todas las cadenas de la tabla nat
+iwconfig eth1                                        | mostrar la configuración de una tarjeta de red inalámbrica
+iwlist scan                                          | mostrar las redes inalámbricas
+jobs                                                 | mostrar todos los procesos en ejecución y sus estados
+join                                                 | fusiona varios archivos en uno solo basándose en un campo común
+kill -1 ID_Processo                                  | forzar un proceso para recargar la configuración
+kill -9 ID_Processo                                  | forzar el cierre de un proceso y terminarlo
+kill                                                 | detener un programa o un proceso que no responde de forma manual
+last reboot                                          | mostrar historial de reinicio
+ldd /usr/bin/ssh                                     | mostrar las bibliotecas compartidas requeridas por el programa ssh
+less file1                                           | parecido al commando ‘more’ pero permite salvar el movimiento en el fichero así como el movimiento hacia atrás
+less                                                 | inspeccionar archivos grandes hacia delante y hacia atrás, desplazándose con la tecla de Intro y la barra espaciadora
+ln                                                   | crear enlaces duros y blandos a otros archivos
+ln file1 lnk1                                        | crear un enlace físico al fichero o directorio
+ln -s file1 lnk1                                     | crear un enlace simbólico al fichero o directorio
+locate \*,ps                                         | encuentra ficheros con extensión , ps’ ejecutados primeramente con el command ‘updatedb’
+logout                                               | cerrar sesión
+ls *[0-9]*                                           | mostrar los ficheros y carpetas que contienen números
+ls -a                                                | mostrar los ficheros ocultos
+lsattr                                               | mostrar atributos especiales
+ls                                                   | enumerar los archivos y directorios dentro de un sistema
+ls -F                                                | ver los ficheros de un directorio
+ls -lh                                               | Mostrar permisos
+ls -l                                                | mostrar los detalles de ficheros y carpetas de un directorio
+ls -lSr |more                                        | mostrar el tamaño de los ficheros y directorios ordenados por tamaño
+lsmod                                                | mostrar el kernel cargado
+lsof /home/user1                                     | muestra una lista de ficheros abiertos en un camino dado del sistema
+lsof -p $$                                           | mostrar una lista de ficheros abiertos por procesos
+lspci -tv                                            | mostrar los dispositivos PCI
+ls /tmp | pr -T5 -W$COLUMNS                          | dividir la terminal en 5 columnas
+lstree                                               | mostrar los ficheros y carpetas en forma de árbol comenzando por la raíz
+lsusb -tv                                            | mostrar los dispositivos USB
+logname                                              | muestra el nombre sesión actual
+ls                                                   | ver los ficheros de un directorio
+ls                                                   | ver los ficheros de un directorio
+ls                                                   | ver los ficheros de un directorio
+man                                                  | conseguir el manual de cualquier comando que se pueda ejecutar en el terminal
+man ping                                             | mostrar las páginas del manual on-line; por ejemplo, en un comando ping, usar la opción ‘-k’ para encontrar cualquier comando relacionado
+mii-tool eth0                                        | mostar el estado de enlace de ‘eth0’
+mkbootdisk –device /dev/fd0 `uname -r`               | crear un floppy boteable
+mkdir                                                | crear un directorio o múltiples directorios al mismo tiempo, con sus respectivos permisos
+mkdir dir1                                           | crear una carpeta o directorio con nombre ‘dir1’
+mkdir dir1 dir2                                      | crear dos carpetas o directorios simultáneamente (Crear dos directorios a la vez)
+mkdir lab{1..20}                                     | crear carpetas o directorios simultáneamente (crea 20 directorios en terminacion numeral, lab1, lab2, lab3...lab20)
+mkdir -p /tmp/dir1/dir2                              | crear un árbol de directorios
+mke2fs /dev/hda1                                     | crear un fichero de sistema tipo Linux ext 2 en hda1
+mke2fs -j /dev/hda1                                  | crear un fichero de sistema tipo Linux ext3 (periódico) en la partición hda1
+mkfs /dev/hda1                                       | crear un fichero de sistema tipo Linux en la partición hda1
+mkfs -t vfat 32 -F /dev/hda1                         | crear un fichero de sistema FAT32 en hda1
+mkswap /dev/hda3                                     | crear fichero de sistema swap
+mkswap /dev/hda3                                     | crear un fichero de sistema swap
+more file1                                           | ver el contenido a lo largo de un fichero
+mount /dev/cdrom /mnt/cdrom                          | montar un cdrom / dvdrom
+mount /dev/fd0 /mnt/floppy                           | montar un disco flexible (floppy)
+mount /dev/hda2 /mnt/hda2                            | montar un disco llamado hda2, Verifique primero la existencia del directorio ‘/ mnt/hda2’; si no está, debe crearlo
+mount /dev/hdb /mnt/cdrecorder                       | montar un cd regrabable / dvdrom (un dvd)
+mount /dev/hdc /mnt/cdrecorder                       | montar un cd regrabable o un dvdrom
+mount /dev/sda1 /mnt/usbdisk                         | montar un usb pen-drive o una memoria (sin especificar el tipo de sistema de ficheros)
+mount -o loop file,iso /mnt/cdrom                    | montar un fichero o una imagen iso
+mount -t vfat /dev/hda5 /mnt/hda5                    | montar un sistema de ficheros FAT32
+mv dir1 new_dir                                      | renombrar o mover un fichero o carpeta (directorio)
+mv                                                   | mover y renombrar archivos y directorios
+mmv                                                  | mover y renombrar archivos y directorios
+msfconsole                                           | explica cómo ingresar al entorno Metasploit y recibir el mensaje msf > en la terminal
+nano                                                 | editar y gestionar archivos; compatible con la mayoría de lenguajes
+nbtscan ip_addr                                      | resolución de nombre de red bios
+netstat                                              | muestra información sobre las conexiones de red
+netstat -tupl                                        | mostrar todos los servicios de escucha de red en el sistema y sus PID
+netstat -tup                                         | mostrar todas las conexiones de red activas y sus PID
+newgrp group_name                                    | registra a un nuevo grupo para cambiar el grupo predeterminado de los ficheros creados recientemente
+nmblookup -A ip_addr                                 | resolución de nombre de red bios
+nslookup www.example.com                             | buscar el nombre del host para resolver el nombre a una direccióm ip y viceversa
+nmap 10.10.2.1                                       | le indica a NMAP que apunte a una única dirección IP
+pacman                                               | instalar, eliminar y gestionar paquetes en distribuciones basadas en Arch
+passwd                                               | añadir y cambiar contraseñas de usuario
+passwd                                               | cambiar contraseña
+passwd user1                                         | cambiar la contraseña de un usuario (solamente por root)
+ping                                                 | probar la conectividad de red
+ps -eafw                                             | muestra las tareas Linux
+ps -e -o pid,args –forest                            | muestra las tareas Linux en un modo jerárquico
+ps                                                   | generar un snapshot de los procesos en ejecución en el sistema
+pstree                                               | mostrar un árbol sistema de procesos
+pwck                                                 | chequear la sintaxis correcta el formato de fichero de ‘/etc/passwd’ y la existencia de usuarios
+pwd                                                  | encontrar la ruta del directorio en funcionamiento en el momento
+python3                                              | ejecuta un script Python usando la version 3, la mas moderna
+python                                               | ejecuta un script Python
+rar a file1.rar file1 file2 dir1                     | comprimir ‘file1’, ‘file2’ y ‘dir1’ simultáneamente
+rar a file1.rar test_file                            | crear un fichero rar llamado ‘file1.rar’
+rar x file1.rar                                      | descomprimir archivo rar
+reboot                                               | Reinicia el sistema
+recode ..HTML < page.txt > page.html                 | convertir un fichero de texto en html
+recode -l | more                                     | mostrar todas las conversiones de formato disponibles
+reset                                                | reiniciar el terminal, y restaurar la configuración por defecto
+rmdir dir1                                           | borrar la carpeta llamada ‘dir1’
+rmdir lab{1..20}                                     | borrar carpetas o directorios simultáneamente (elimina 20 directorios en terminacion numeral, lab1, lab2, lab3...lab20)
+rm                                                   | eliminar archivos y carpetas
+rm -f file1                                          | borrar el fichero llamado ‘file1’
+rm -rf dir1 dir2                                     | borrar dos carpetas (directorios) con su contenido de forma recursiva
+rm -rf dir1                                          | eliminar una carpeta llamada ‘dir1’ con su contenido de forma recursiva, (Si lo borro recursivo estoy diciendo que es con su contenido)
+route add -net 0/0 gw IP_Gateway                     | configurar entrada predeterminada
+route del 0/0 gw IP_gateway                          | eliminar la ruta estática
+route -n                                             | mostrar mesa de recorrido
+rpmbuild –rebuild package_name.src.rpm               | construir un paquete rpm desde una fuente rpm
+rpm –checksig package.rpm                            | verificar la integridad de un paquete rpm
+rpm -e package_name.rpm                              | eliminar un paquete rpm
+rpm -F package.rpm                                   | actualizar un paquete rpm solamente si este está instalado
+rpm –import /media/cdrom/RPM-GPG-KEY                 | importar la firma digital de la llave pública
+rpm -ivh –nodeeps package.rpm                        | instalar un paquete rpm ignorando las peticiones de dependencias
+rpm -ivh package.rpm                                 | instalar un paquete rpm
+rpm -ivh /usr/src/redhat/RPMS/`arch`/package.rpm     | instalar un paquete construido desde una fuente rpm
+rpm -qa gpg-pubkey                                   | verificar la integridad de todos los paquetes rpm instalados
+rpm -qa | grep httpd                                 | mostrar todos los paquetes rpm con el nombre “httpd”
+rpm -qa                                              | mostrar todos los paquetes rpm instalados en el sistema
+rpm -q -a –qf ‘%10{SIZE}t%{NAME}n’ | sort -k1,1n     | mostrar el espacio usado por los paquetes rpm instalados organizados por tamaño (Fedora, Redhat y otros)
+rpm -qc package_name                                 | mostrar lista de configuración de ficheros dados por un paquete rpm instalado
+rpm -qf /etc/httpd/conf/httpd.conf                   | verificar cuál paquete rpm pertenece a un fichero dado
+rpm -qg “System Environment/Daemons”                 | mostar los paquetes rpm de un grupo software
+rpm -qi package_name                                 | obtener información en un paquete específico instalado
+rpm -ql package_name                                 | mostrar lista de ficheros dados por un paquete rpm instalado
+rpm -q package_name –changelog                       | mostar el historial de revisions de un paquete rpm
+rpm -q package_name –scripts                         | mostrar los scripts comenzados durante la instalación /eliminación
+rpm -q package_name –whatprovides                    | mostar la capacidad dada por un paquete rpm
+rpm -q package_name –whatrequires                    | mostrar lista de dependencias solicitada para un paquete rpm
+rpm -qp package.rpm -l                               | mostrar lista de ficheros dados por un paquete rpm que aún no ha sido instalado
+rpm -U package.rpm                                   | actualizar un paquete rpm sin cambiar la configuración de los ficheros
+rpm -Va                                              | chequear todos los paquetes rpm instalados en el sistema. Usar con cuidado
+rpm -V package_name                                  | chequear el tamaño del fichero, licencias, tipos, dueño, grupo, chequeo de resumen de MD5 y última modificación
+rpm -Vp package.rpm                                  | verificar un paquete rpm no instalado todavía
+return                                               | salir de una función de shell
+rename                                               | cambiar el nombre de archivos
+sed ‘/^$/d’ example.txt                              | eliminar todas las líneas en blanco desde el ejemplo.txt
+sed ‘/ *#/d; /^$/d’ example.txt                      | eliminar comentarios y líneas en blanco de ejemplo.txt
+sed -e ‘1d’ result.txt                               | elimina la primera línea del fichero ejemplo.txt
+sed -n ‘/stringa1/p’                                 | visualizar solamente las líneas que contienen la palabra “string1”
+sed ‘s/stringa1/stringa2/g’ example.txt              | reubicar “string1” con “string2” en ejemplo.txt
+service                                              | iniciar, parar y reiniciar servicios
+shutdown                                             | apagar, detener y reiniciar una máquina
+shutdown -c                                          | cancelar un apagado planificado del sistema
+shutdown -h hours                                    | minutes &  apagado planificado del sistema
+shutdown -h now                                      | apagar el sistema
+shutdown -r now                                      | reiniciar
+smartctl -A /dev/hda                                 | monitorear la fiabilidad de un disco duro a través de SMART
+smartctl -i /dev/hda                                 | chequear si SMART está activado en un disco duro
+smbclient -L ip_addr/hostname                        | mostrar acciones remotas de un host en windows
+ssh                                                  | conectarse a una máquina externa en la red usando el protocolo SSH
+strace -c ls >/dev/null                              | mostrar las llamadas del sistema hechas y recibidas por un proceso
+strace -f -e open ls >/dev/null                      | mostrar las llamadas a la biblioteca
+sudo                                                 | realizar tareas que requieran permisos de administrador o root
+su                                                   | ejecutar un programa como un usuario diferente
+swapon /dev/hda2 /dev/hdb3                           | activar dos particiones swap
+swapon /dev/hda3                                     | activando una nueva partición swap
+systemd-resolve                                      | gestiona la configuración del sistema de resolución de nombres de dominio
+tac file1                                            | ver los contenidos de un fichero comenzando desde la última línea
+tail -2 file1                                        | ver las dos últimas líneas de un fichero
+tail -f /var/log/messages                            | ver en tiempo real qué ha sido añadido al fichero
+tail                                                 | mostrar las últimas 10 líneas de un archivo
+tail /var/log/dmesg                                  | mostrar eventos inherentes al proceso de carga del kernel
+tail /var/log/messages                               | mostrar los eventos del sistema
+tar                                                  | archivar archivos o directorios en un archivo.tar
+tar -cvf archive.tar file1                           | crear un tarball descomprimido
+tar -cvf archive.tar file1 file2 dir1                | crear un archivo conteniendo ‘file1’, ‘file2′ y’dir1’
+tar -cvfj archive.tar.bz2 dir1                       | crear un tarball comprimido dentro de bzip2
+tar -cvfz archive.tar.gz dir1                        | crear un tarball comprimido en gzip
+tar -tf archive.tar                                  | mostrar los contenidos de un archivo
+tar -xvf archive.tar -C /tmp                         | extraer un tarball en / tmp
+tar -xvf archive.tar                                 | extraer un tarball
+tar -xvfj archive.tar.bz2                            | descomprimir un archivo tar comprimido en bzip2
+tar -xvfz archive.tar.gz                             | descomprimir un archive tar comprimido en gzip
+tcpdump tcp port 80                                  | mostrar todo el tráfico HTTP
+telinit 0                                            | apagar el sistema
+top                                                  | descubrir los procesos que consumen más recursos
+top                                                  | mostrar las tareas de linux usando la mayoría cpu
+touch                                                | crear nuevos archivos y modificar marcas de fecha
+touch -t 0712250000 file1                            | modificar el tiempo real (tiempo de creación) de un fichero o directorio
+traceroute                                           | verificar la ruta que los paquetes realizan hacia un host específico, así como cuánto tiempo tarda
+tree                                                 | mostrar los ficheros y carpetas en forma de árbol comenzando por la raíz
+umount /dev/hda2                                     | desmontar un disco llamado hda2, Salir primero desde el punto ‘/ mnt/hda2
+umount -n /mnt/hda2                                  | correr el desmontaje sin leer el fichero /etc/mtab, Útil cuando el fichero es de solo lectura o el disco duro está lleno
+unalias                                              | eliminar un alias definido con el comando alias
+uname                                                | generar información detallada sobre el sistema operativo Linux y el hardware
+uname -m                                             | mostrar la arquitectura de la máquina
+uname -r                                             | mostrar la versión del kernel usado
+unix2dos fileunix.txt filedos.txt                    | convertir un formato de fichero de texto desde UNIX a MSDOS
+unrar x file1.rar                                    | descomprimir archivo rar
+unset                                                | elimina una variable de entorno.
+unzip                                                | extraer archivos comprimidos en formato ZIP de un archivo
+unzip file1.zip                                      | descomprimir un archivo zip
+useradd                                              | crear un usuario nuevo
+useradd user1                                        | crear un nuevo usuario
+userdel                                              | eliminar usuarios existentes
+userdel -r user1                                     | borrar un usuario (‘-r’ elimina el directorio Home)
+usermod                                              | modificar usuarios existentes
+vi                                                   | editar y gestionar archivos
+watch -n1 ‘cat /proc/interrupts’                     | mostrar interrupciones en tiempo real
+wc                                                   | generar el número de líneas y palabras en un archivo de texto, así como el tamaño en bytes
+w                                                    | muestra los usuarios que han iniciado sesion
+wget -c www.example.com/file.iso                     | descargar un fichero con la posibilidad de parar la descargar y reanudar más tarde
+wget                                                 | descargar archivos de Internet
+wget -r www.example.com                              | descargar un sitio web completo
+whatis                                               | conocer la funcionalidad de cualquier comando
+whatis …keyword                                      | muestra la descripción de lo que hace el programa
+whereis                                              | encontrar la ruta del comando indicado
+whereis halt                                         | mostrar la ubicación de un fichero binario, de ayuda o fuente, En este caso pregunta dónde está el comando ‘halt’
+which halt                                           | mostrar la senda completa (el camino completo) a un binario / ejecutable
+which                                                | identificar la ruta de un ejecutable en concreto
+whoami                                               | mostrar el nombre de usuario en uso
+who -a                                               | mostrar quien está registrado, e imprimir hora del último sistema de importación, procesos muertos, etc
+whois www.example.com                                | buscar en base de datos Whois
+xargs (echo "archivo1 archivo2" | xargs rm)          | -tomar esta lista y pasarla como argumentos al comando rm, eliminar archivos. Así, rm archivo1 archivo2 archivo3
+yum clean all                                        | eliminar desde los paquetes caché y ficheros de encabezado
+yum clean headers                                    | eliminar todos los ficheros de encabezamiento que el sistema usa para resolver la dependencia
+yum clean packages                                   | limpiar un caché rpm borrando los paquetes descargados
+yum                                                  | instalar, eliminar y gestionar paquetes en distribuciones basadas en RHEL
+yum install package_name                             | descargar e instalar un paquete rpm
+yum list                                             | listar todos los paquetes instalados en el sistema
+yum localinstall package_name.rpm                    | este instalará un RPM y tratará de resolver todas las dependencies para ti, usando tus repositorios
+yum remove package_name                              | eliminar un paquete rpm
+yum search package_name                              | Encontrar un paquete en repositorio rpm
+yum update package_name                              | modernizar / actualizar un paquete rpm
+yum update package_name.rpm                          | actualizar todos los paquetes rpm instalados en el sistema
+zip                                                  | comprimir archivos en formato universal ZIP
+zip file1.zip file1                                  | crear un archivo comprimido en zip
+zip -r file1.zip file1 file2 dir1                    | comprimir, en zip, varios archivos y directorios de forma simultánea
+nasm -f elf64 -o file.o file.asm; ld -o file file.o  | convertir un archivo .asm (assemble file code) en un archivo binario ejecutable
+   
+Tools Detecting Steganography
+--------------------------------------------------------------------------------------------------
+Tool         | File types                            | Description                               |            
+-------------|---------------------------------------|--------------------------------------------
+stegoVeritas | Images (JPG, PNG, GIF, TIFF, BMP)     | A wide variety of simple and advanced checks. Check out stegoveritas.py -h.
+zsteg        | Images (PNG, BMP)                     | Detects various LSB stego, also openstego and the Camouflage tool
+stegdetect   | Images (JPG)                          | Performs statistical tests to find if a stego tool was used (jsteg, outguess, jphide, ...). Check out man stegdetect for details.
+stegbreak    | Images (JPG)                          | Brute force cracker for JPG images. Claims it can crack outguess, jphide and jsteg.
+
+Tools Actually Doing Steganography
+--------------------------------------------------------------------------------------------------
+Tool          | File types                           | Description                               |                     
+--------------|--------------------------------------|--------------------------------------------
+AudioStego    | Audio (MP3 / WAV)                    | Details on how it works are in this blog post                   
+jphide/jpseek | Image (JPG)                          | Pretty old tool from here. Here, the version from here is installed since the original one crashed all the time.
+jsteg         | Image (JPG)                          | LSB stego tool. Does not encrypt the message.                   
+mp3stego      | Audio (MP3)                          | Old program. Encrypts and then hides a message (3DES encryption!). Windows tool running in Wine.
+
+Steganography GUI Tools
+--------------------------------------------------------------------------------------------------
+Tool                  | File types                   | Description                               |         
+----------------------|------------------------------|--------------------------------------------
+Steg                  | Images (JPG, TIFF, PNG, BMP) | Handles many file types and implements different methods | steg
+Steganabara           | Images (???)                 | Interactively transform images until you find something | steganabara
+Stegsolve             | Images (???)                 | Interactively transform images, view color schemes separately, ... | stegsolve
+SonicVisualiser       | Audio (???)                  | Visualizing audio files in waveform, display spectrograms, ... | sonic-visualiser
+Stegosuite            | Images (JPG, GIF, BMP)       | Can encrypt and hide data in images. Actively developed. | stegosuite
+OpenPuff              | Images, Audio, Video         | Sophisticated tool with long history. Still maintained. Windows tool running in wine. | openpuff
+DeepSound             | Audio (MP3, WAV)             | Audio stego tool trusted by Mr. Robot himself. Windows tool running in wine (very hacky, requires VNC and runs in virtual desktop, MP3 broken due to missing DLL!)
+cloackedpixel-analyse | Images (PNG)                 | LSB stego visualization for PNGs - use it to detect suspiciously random LSB values in images (values close to 0.5 may indicate encrypted data is embedded)
+

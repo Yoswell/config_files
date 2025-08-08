@@ -1,0 +1,26 @@
+name: Custom Theme # Nombre del tema
+accent: '#161619' # Color de acento para elementos de UI
+cursor: '#E55257' # Color del cursor en la entrada (opcional; por defecto se usa el color de acento si no se especifica)
+background: '#060608' # Color de fondo del terminal
+foreground: '#5A5A67' # Color del primer plano (texto)
+details: darker # Estilo del tema, más oscuro
+
+terminal_colors: # Colores ANSI de escape
+  bright:
+    black: '#9c9293' # Negro brillante
+    blue: '#9E2226'  # Azul brillante
+    cyan: '#D92A2E'  # Cian brillante
+    green: '#B55154' # Verde brillante
+    magenta: '#E55257' # Magenta brillante
+    red: '#B37F81'   # Rojo brillante
+    white: '#e0d1d2' # Blanco brillante
+    yellow: '#657b83' # Amarillo brillante
+  normal:
+    black: '#9c9293' # Negro brillante
+    blue: '#9E2226'  # Azul brillante
+    cyan: '#D92A2E'  # Cian brillante
+    green: '#B55154' # Verde brillante
+    magenta: '#E55257' # Magenta brillante
+    red: '#B37F81'   # Rojo brillante
+    white: '#e0d1d2' # Blanco brillante
+    yellow: '#657b83' # Amarillo brillante

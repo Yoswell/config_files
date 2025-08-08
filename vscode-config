@@ -1,0 +1,69 @@
+{
+    "workbench.colorTheme": "Black Waves",
+    "editor.minimap.enabled": false,
+    "editor.fontSize": 13,
+    "editor.fontFamily": "JetBrains Mono ExtraBold",
+    "editor.overviewRulerBorder": false,
+    
+    "workbench.settings.applyToAllProfiles": [ ],
+
+    "workbench.colorCustomizations": {
+        "editor.background": "#060607",
+        "panel.background": "#060607",
+        "sideBar.background": "#060607",
+        "sideBar.border": "#101112",
+        "menu.background": "#060607",
+
+        "titleBar.activeBackground": "#060607",
+        "titleBar.border": "#101112",
+
+        "statusBar.background": "#060607",
+        "activityBarBadge.background": "#060607",
+        "titleBar.inactiveBackground": "#060607",
+        "activityBar.background": "#060607",
+        "activityBarTop.background": "#060607",
+        "banner.background": "#060607",
+
+        "tab.activeBackground": "#09090a",
+        "tab.inactiveBackground": "#060607",
+        "statusBarItem.activeBackground":"#09090a",
+        "statusBarItem.inactiveBackground":"#060607",
+        "statusBar.border":"#101112",
+        "statusBarItem.hoverBackground":"#060607",
+
+        "scrollbarSlider.background": "#09090a",
+        "editorIndentGuide.background1": "#09090a",
+        "sideBarSectionHeader.border": "#000000"
+    },
+
+    "editor.hover.enabled": false,
+
+    "workbench.tree.indent": 10,
+    "workbench.layoutControl.enabled": false,
+    "editor.cursorBlinking": "expand",
+    "editor.guides.indentation": false,
+    "editor.scrollbar.horizontalScrollbarSize": 8,
+    "editor.scrollbar.verticalScrollbarSize": 8,
+    "window.density.editorTabHeight": "compact",
+    "editor.fastScrollSensitivity": 15,
+    "editor.mouseWheelScrollSensitivity": 3,
+    "editor.scrollBeyondLastLine": false,
+    "editor.smoothScrolling": true,
+    "editor.stickyScroll.enabled": false,
+    "editor.stickyScroll.scrollWithEditor": false,
+    "editor.screenReaderAnnounceInlineSuggestion": false,
+    "workbench.tree.enableStickyScroll": false,
+    "editor.minimap.showMarkSectionHeaders": false,
+    "editor.minimap.showRegionSectionHeaders": false,
+    "editor.minimap.renderCharacters": false,
+    "workbench.statusBar.visible": false,
+    "window.menuBarVisibility": "compact",
+    "extensions.ignoreRecommendations": true,
+    "workbench.editor.enablePreview": false,
+    "debug.console.fontSize": 12,
+    "scm.inputFontSize": 12,
+    "terminal.integrated.fontSize": 12,
+    "chat.editor.fontSize": 11,
+    "markdown.preview.fontSize": 12,
+    "editor.renderLineHighlight": "none"
+}
