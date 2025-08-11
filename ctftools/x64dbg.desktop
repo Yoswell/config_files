@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=x64dbg
+Exec=env WINEPREFIX="/home/parrot/.wine" wine-stable Z:\\\\home\\\\parrot\\\\Downloads\\\\release\\\\x64\\\\x64dbg.exe 
+Type=Application
+StartupNotify=true
+Comment=A Debugger for the future!
+Path=/home/parrot/Downloads/release/x64
+Icon=E79B_x64dbg.0
+StartupWMClass=x64dbg.exe
