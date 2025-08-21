@@ -3115,7 +3115,6 @@ body:not(.heading-indicator-off) .markdown-preview-sizer>div>h1::before {
     left: 0px;
 }
 
-
 body.h1-divider-on :is(.markdown-preview-sizer>div>h1, .markdown-rendered>h1, .HyperMD-header-1)::after {
     content: "";
     position: absolute;
@@ -3172,6 +3171,7 @@ h2,
 .inline-title[data-level='2'],
 .HyperMD-list-line .cm-header-2 {
     text-transform: var(--h2-text-transform);
+    padding-bottom: 10px !important;
 }
 
 .h2-color-designated {
@@ -3202,7 +3202,6 @@ body:not(.heading-indicator-off) .markdown-preview-sizer>div>h2::before {
     top: 4px;
     left: 0px;
 }
-
 
 body.h2-divider-on :is(.markdown-preview-sizer>div>h2, .markdown-rendered>h2, .HyperMD-header-2)::after {
     content: "";
@@ -3260,6 +3259,7 @@ h3,
 .inline-title[data-level='3'],
 .HyperMD-list-line .cm-header-3 {
     text-transform: var(--h3-text-transform);
+    padding-bottom: 10px !important;
 }
 
 .h3-color-designated {
@@ -3347,6 +3347,7 @@ h4,
 .inline-title[data-level='4'],
 .HyperMD-list-line .cm-header-4 {
     text-transform: var(--h4-text-transform);
+    padding-bottom: 10px !important;
 }
 
 .h4-color-designated {
@@ -3435,6 +3436,7 @@ h5,
 .inline-title[data-level='5'],
 .HyperMD-list-line .cm-header-5 {
     text-transform: var(--h5-text-transform);
+    padding-bottom: 10px !important;
 }
 
 .h5-color-designated {
@@ -3523,6 +3525,7 @@ h6,
 .inline-title[data-level='6'],
 .HyperMD-list-line .cm-header-6 {
     text-transform: var(--h6-text-transform);
+    padding-bottom: 10px !important;
 }
 
 .h6-color-designated {
