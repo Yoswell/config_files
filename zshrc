@@ -38,11 +38,7 @@ function hex-decode() {
 	alias bat='batcat --theme="Catppuccin Mocha" -l ruby'
 	alias stopVpn='sudo killall openvpn'
 	alias rmall='sudo rm -r'
-	alias jdGui='flatpak run io.github.java_decompiler.jd-gui'
-	alias ida='/home/parrot/Tools/Ida/./ida64'
-	alias bninja='/home/parrot/Tools/BNinja/./binaryninja'
-	alias kerbrute='/home/parrot/Tools/Kerbrute/./kerbrute'
-	alias guiradar='flatpak run org.radare.iaito'
+	alias home='~'
 
 # Plugins
 	plugins=(
