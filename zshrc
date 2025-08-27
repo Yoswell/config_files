@@ -21,12 +21,20 @@
 	# ZSH_THEME="evan"
 	# ZSH_THEME="powerlevel10k/powerlevel10k"
 
-function hex-decode() {
-  echo "$@" | xxd -p -r
-}
+# Functions
+	function hexd() {
+		echo "$@" | xxd -p -r
+	}
+
+	function b64() {
+		echo "$@" | base64 -d
+	}
+
+	function mkt() {
+		mkdir {content,nmap,credentials,exploits}
+	}
 
 # Aliases
-	alias textEditor='gnome-text-editor'
 	alias ll='ls -l'
 	alias la='ls -la'
 	alias cls="clear"
@@ -38,7 +46,6 @@ function hex-decode() {
 	alias bat='batcat --theme="Catppuccin Mocha" -l ruby'
 	alias stopVpn='sudo killall openvpn'
 	alias rmall='sudo rm -r'
-	alias home='~'
 
 # Plugins
 	plugins=(

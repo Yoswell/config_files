@@ -41,30 +41,43 @@
 # Checksec
 	sudo apt install checksec -y 
 
+# Stegsnow
+	sudo apt install stegsnow -y
+
 # Ctf tools pip
 	pip install oletools --break-system-packages
 	pip install stego-lsb --break-system-packages
 	pip install pwntools --break-system-packages
 	pip install ciphey --upgrade --break-system-packages
+	pip install pycryptodome --break-system-package
+	pip install decompyle3 --break-system-packages
+	pip install decompyle6 --break-system-packages
+	pip3 install pypykatz --break-system-packages
+	pip3 install defaultcreds-cheat-sheet --break-system-package
 	pip3 install stegoveritas --break-system-packages
 	stegoveritas_install_deps
-	pip3 install pypykatz --break-system-packages
 
 # Sonic visualizer
 	mkdir ctftools && cd ctftools
 	curl -O https://code.soundsoftware.ac.uk/attachments/download/2880/SonicVisualiser-5.2.1-x86_64.AppImage
 	mv SonicVisualiser-5.2.1-x86_64.AppImage sonic.AppImage
-	upx sonic.AppImage
+	chmod +x sonic.AppImage
 
 # JdGui
 	curl -O https://github.com/java-decompiler/jd-gui/releases/download/v1.6.6/jd-gui-1.6.6.jar
 	mv jd-gui-1.6.6.jar jdGui.jar
-	upx jdGui.jar
+	chmod +x jdGui.jar
 
+# Stegsolve
+	wget http://www.caesum.com/handbook/Stegsolve.jar -O stegsolve.jar
+	chmod +x stegsolve.jar
+
+# Jsteg
+	sudo wget -O /usr/bin/jsteg https://github.com/lukechampine/jsteg/releases/download/v0.1.0/jsteg-linux-amd64
+	sudo chmod +x /usr/bin/jsteg
+	
 # Sqlite browser
-	curl -O https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v3.13.1/DB.Browser.for.SQLite-v3.13.1-x86.64-v2.AppImage
-	mv DB.Browser.for.SQLite-v3.13.1-x86.64-v2.AppImage sqliteBrowser.AppImage
-	upx sqliteBrowser.AppImage
+	sudo apt install sqlitebrowser
 
 # Cmake
 	sudo apt install cmake -y
@@ -97,7 +110,6 @@
 	mkdir build && cd build
 	cmake ..
 	make
-	upx hideme
 	sudo ln -sf ~/tools/ctftools/AudioStego/build/hideme /usr/bin/hideme
 
 # LSB Steganografhy
@@ -110,9 +122,18 @@
 	sudo apt install caido -y
 
 # Masscan
+	cd ~/tools/ctftools
 	git clone https://github.com/robertdavidgraham/masscan.git
 	cd masscan
 	make
 
-# Remmina 
+# Remmina
 	sudo apt install remmina -y
+
+# Pycdc
+	cd ~/tools/ctftools
+	git clone https://github.com/zrax/pycdc.git
+	cd pycdc
+	mkdir build && cd build
+	cmake ..
+	make
