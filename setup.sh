@@ -22,25 +22,38 @@
 	sudo apt remove vim --purge
 	sudo apt remove nano --purge
 
-# Archivos de configuración
-	mkdir -p ~/tools && cd ~/tools
+# Archivos de configuracion
+	cd ~
+	mkdir -p tools && cd tools
 	[ -d "config_files" ] && rm -rf config_files
 	git clone https://github.com/Yoswell/config_files.git
 
-# Configuración de wallpapers
-	mkdir -p ~/Desktop/wallpapers
-	cp ~/tools/config_files/wallpapers/* ~/Desktop/wallpapers
+# Desktop/wallpapers directory
+	cd ~/Desktop
 
-	sudo mv /usr/share/backgrounds/kali/kali-maze-16x9.jpg /usr/share/backgrounds/kali/kali-maze-16x9-copy.jpg
-	sudo mv /usr/share/backgrounds/kali/login.svg /usr/share/backgrounds/kali/login-copy.svg
+	# Configuracion de wallpapers
+		mkdir -p wallpapers && cd wallpapers
+		
+		cp ~/tools/config_files/wallpapers/* .
 
-	sudo cp ~/Desktop/wallpapers/2.jpg /usr/share/backgrounds/kali/kali-maze-16x9.jpg
-	sudo cp ~/Desktop/wallpapers/2.jpg /usr/share/backgrounds/kali/login.svg
+	# Configuracion de wallpaper en el login 
+		sudo mv /usr/share/backgrounds/kali/kali-maze-16x9.jpg /usr/share/backgrounds/kali/kali-maze-16x9-copy.jpg
+		sudo mv /usr/share/backgrounds/kali/login.svg /usr/share/backgrounds/kali/login-copy.svg
 
-# Clonar repositorio de Writeups de CTF
+		sudo cp 2.jpg /usr/share/backgrounds/kali/kali-maze-16x9.jpg
+		sudo cp 2.jpg /usr/share/backgrounds/kali/login.svg
+
+# Documents directory
 	cd ~/Documents
-	[ -d "CTF_writeups" ] &&  rm -rf CTF_writeups
-	git clone https://github.com/Yoswell/ctf_writeups.git
+	mkdir {htb_academy,htb_apps,cpts,ejpt,oscp}
+	
+	# Clonar repositorio de writeups
+		[ -d "ctf_writeups" ] &&  rm -rf ctf_writeups
+		git clone https://github.com/Yoswell/ctf_writeups.git
+		
+	# Clonar repositorio de notas
+		[ -d "obsidian_notes" ] &&  rm -rf obsidian_notes
+		git clone https://github.com/Yoswell/obsidian_notes.git
 
 # Configurar ZSH
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -51,11 +64,6 @@
 # Powerlevel10k
 	cd ~/.oh-my-zsh
 	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-
-# Crear enlace simbólico para comandos personalizados
-	cd ~/tools/config_files
-	sudo ln -sf comandos.txt /usr/bin/comandos
-	rm -r comandos.txt
 
 # Estilizar zshrc y kitty para root
 	sudo mkdir -p /root/.config/micro/colorschemes
