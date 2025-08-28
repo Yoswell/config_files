@@ -7,13 +7,6 @@
 	echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/windsurf-stable.gpg] https://windsurf-stable.codeiumdata.com/wVxQEIWkwPUEAGf3/apt stable main" | sudo tee /etc/apt/sources.list.d/windsurf.list > /dev/null
 	rm -f windsurf-stable.gpg
 
-	sudo apt install apt-transport-https
-	sudo apt update
-	sudo apt install windsurf -y
-
-# Kitty terminal
-	sudo apt install kitty -y
-
 # Micro editor
 	cd ~/tools
 	curl -s https://getmic.ro | bash
@@ -24,25 +17,29 @@
 	micro -plugin install editorconfig
 	micro -plugin install nordcolors
 
-# lxappearance tweaks
-	sudo apt install lxappearance -y
-
-# Rofi launcher
-	sudo apt install rofi -y
-
 # Gdb plugins binary analizer
 	sudo apt install gdb-peda -y
 	curl -qsL 'https://install.pwndbg.re' | sh -s -- -t pwndbg-gdb
 	bash -c "$(curl -fsSL https://gef.blah.cat/sh)"
 
-# Ghidra dissasemble
+# Apt install tools
+	sudo apt update
+	sudo apt install spand -y
+	sudo apt install rlwrap -y
+	sudo apt install remmina -y
+	sudo apt install caido -y
+	sudo apt install stegseek -y
+	sudo apt install pngcheck -y
+	sudo apt install sqlitebrowser -y
+	sudo apt install cmake -y
 	sudo apt install ghidra -y
-
-# Checksec
 	sudo apt install checksec -y 
-
-# Stegsnow
 	sudo apt install stegsnow -y
+	sudo apt install lxappearance -y
+	sudo apt install rofi -y
+	sudo apt install kitty -y
+	sudo apt install apt-transport-https
+	sudo apt install windsurf -y
 
 # Ctf tools pip
 	pip install oletools --break-system-packages
@@ -76,12 +73,6 @@
 	sudo wget -O /usr/bin/jsteg https://github.com/lukechampine/jsteg/releases/download/v0.1.0/jsteg-linux-amd64
 	sudo chmod +x /usr/bin/jsteg
 	
-# Sqlite browser
-	sudo apt install sqlitebrowser
-
-# Cmake
-	sudo apt install cmake -y
-	
 # Pdf cracker
 	git clone https://github.com/MichaelSasser/pdfcrack-ng.git
 	cd pdfcrack-ng
@@ -97,12 +88,6 @@
 # Stego
 	gem install zsteg
 
-# Stegseek
-	sudo apt install stegseek -y
-
-# Png check
-	sudo apt install pngcheck
-
 # Audio stego
 	sudo apt-get install libboost-all-dev
 	git clone https://github.com/danielcardeenas/AudioStego.git
@@ -117,18 +102,12 @@
 	git clone https://github.com/RobinDavid/LSB-Steganography.git
 	cd LSB-Steganography
 	pip install -r requirements.txt --break-system-packages
-	
-# Caido
-	sudo apt install caido -y
 
 # Masscan
 	cd ~/tools/ctftools
 	git clone https://github.com/robertdavidgraham/masscan.git
 	cd masscan
 	make
-
-# Remmina
-	sudo apt install remmina -y
 
 # Pycdc
 	cd ~/tools/ctftools
@@ -137,3 +116,6 @@
 	mkdir build && cd build
 	cmake ..
 	make
+
+# Rutscan
+	sudo snap install rustscan

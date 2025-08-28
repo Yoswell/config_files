@@ -34,6 +34,15 @@
 		mkdir {content,nmap,credentials,exploits}
 	}
 
+	function varl() {
+		local var_name=$1
+		local file_name=$2
+		local value
+		value=$(cat "$file_name")
+
+		eval "$var_name=\"\$value\""
+	}
+
 # Aliases
 	alias ll='ls -l'
 	alias la='ls -la'

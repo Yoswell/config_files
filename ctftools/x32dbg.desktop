@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=x32dbg
-Exec=env WINEPREFIX="/home/parrot/.wine" wine-stable Z:\\\\home\\\\parrot\\\\Downloads\\\\release\\\\x32\\\\x32dbg.exe 
-Type=Application
-StartupNotify=true
-Comment=A Debugger for the future!
-Path=/home/parrot/Downloads/release/x32
-Icon=F7DE_x32dbg.0
-StartupWMClass=x32dbg.exe

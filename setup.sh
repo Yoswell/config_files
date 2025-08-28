@@ -34,8 +34,8 @@
 	sudo mv /usr/share/backgrounds/kali/kali-maze-16x9.jpg /usr/share/backgrounds/kali/kali-maze-16x9-copy.jpg
 	sudo mv /usr/share/backgrounds/kali/login.svg /usr/share/backgrounds/kali/login-copy.svg
 
-	sudo cp ~/Desktop/wallpapers/2.png /usr/share/backgrounds/kali/kali-maze-16x9.jpg
-	sudo cp ~/Desktop/wallpapers/2.png /usr/share/backgrounds/kali/login.svg
+	sudo cp ~/Desktop/wallpapers/2.jpg /usr/share/backgrounds/kali/kali-maze-16x9.jpg
+	sudo cp ~/Desktop/wallpapers/2.jpg /usr/share/backgrounds/kali/login.svg
 
 # Clonar repositorio de Writeups de CTF
 	cd ~/Documents
@@ -68,25 +68,23 @@
 	cp ~/tools/config_files/zshrc ~/.zshrc
 
 	[ -d "mantis" ] && rm -r mantis
-	unzip -o mantis.zip
-	unzip -o cblack.zip
-	cp -r cblack ~/.themes/cblack
-	cp -r mantis/MantiNight ~/.themes/MantiNight
-	rm mantis.zip && cblack.zip
-	rm -r mantis && rm -r cblack
+	tar -xf mantiNight.tar
+	tar -xf darksun.tar
+	
+	cp -r mantiNight ~/.themes/mantiNight
+	cp -r darksun ~/.themes/darksun
+	
+	rm mantiNight.tar && darksun.tar
+	rm -r mantiNight && rm -r darksun
 
 	mkdir -p ~/.config/micro/colorschemes
 	cp red.micro ~/.config/micro/colorschemes
 	cp kitty.conf ~/.config/kitty/kitty.conf
 
-	[ -d "~/.icons/Colloid-Purple-Dracula-Dark" ] && rm -rf ~/.icons/Colloid-Purple-Dracula-Dark
-	tar -xf icons.tar.gz
-	mkdir -p ~/.icons
-	mv Colloid-Purple-Dracula-Dark ~/.icons
-	rm icons.tar.gz
-
 	sudo cp -f rofi/config.rasi /usr/share/rofi/themes/custom.rasi
 	rm -r rofi
+
+	sudo find . -mindepth 1 -maxdepth 1 ! -name "Windows-10-Icons" -exec rm -rf {} +
 
 # Instalar fuentes JetBrains Mono
 	mkdir -p ~/jetbrains
