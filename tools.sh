@@ -5,7 +5,7 @@
 	wget -qO- "https://windsurf-stable.codeiumdata.com/wVxQEIWkwPUEAGf3/windsurf.gpg" | gpg --dearmor > windsurf-stable.gpg
 	sudo install -D -o root -g root -m 644 windsurf-stable.gpg /etc/apt/keyrings/windsurf-stable.gpg
 	echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/windsurf-stable.gpg] https://windsurf-stable.codeiumdata.com/wVxQEIWkwPUEAGf3/apt stable main" | sudo tee /etc/apt/sources.list.d/windsurf.list > /dev/null
-	rm -f windsurf-stable.gpg
+	sudo rm -f windsurf-stable.gpg
 
 # Micro editor
 	cd ~/tools
@@ -24,7 +24,6 @@
 
 # Apt install tools
 	sudo apt update
-	sudo apt install spand -y
 	sudo apt install rlwrap -y
 	sudo apt install remmina -y
 	sudo apt install caido -y
@@ -38,8 +37,11 @@
 	sudo apt install lxappearance -y
 	sudo apt install rofi -y
 	sudo apt install kitty -y
-	sudo apt install apt-transport-https
+	sudo apt install apt-transport-https -y
 	sudo apt install windsurf -y
+	sudo apt install bloodyad
+	sudo apt install python3-impacket -y
+	sudo apt install impacket-scripts -y
 
 # Ctf tools pip
 	pip install oletools --break-system-packages
@@ -117,5 +119,10 @@
 	cmake ..
 	make
 
-# Rutscan
-	sudo snap install rustscan
+# Impacket
+	cd ~/tools/ctftools
+	git clone https://github.com/fortra/impacket.git
+	cd impacket
+	python3 -m pipx install .
+	cd ../
+	sudo rm -r impacket

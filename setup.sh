@@ -19,8 +19,13 @@
 	sudo sysctl -p
 
 # Desinstalaciones
+	cd ~
 	sudo apt remove vim --purge
 	sudo apt remove nano --purge
+	pip uninstall impacket -y --break-system-packages
+	pip3 uninstall impacket -y --break-system-packages
+	sudo apt remove python3-impacket -y
+	sudo rm -rf .local/lib/python3.13/site-packages/impacket
 
 # Archivos de configuracion
 	cd ~
