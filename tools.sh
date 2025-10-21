@@ -16,6 +16,7 @@
 	micro -plugin install gotham-colors
 	micro -plugin install editorconfig
 	micro -plugin install nordcolors
+	micro -plugin install filemanager
 
 # Gdb plugins binary analizer
 	sudo apt install gdb-peda -y
@@ -39,7 +40,8 @@
 	sudo apt install kitty -y
 	sudo apt install apt-transport-https -y
 	sudo apt install windsurf -y
-	sudo apt install bloodyad
+	sudo apt install bloodyad -y
+	sudo apt install certipy-ad -y
 	sudo apt install python3-impacket -y
 	sudo apt install impacket-scripts -y
 
@@ -47,12 +49,15 @@
 	pip install oletools --break-system-packages
 	pip install stego-lsb --break-system-packages
 	pip install pwntools --break-system-packages
-	pip install ciphey --upgrade --break-system-packages
 	pip install pycryptodome --break-system-package
 	pip install decompyle3 --break-system-packages
 	pip install decompyle6 --break-system-packages
+	pip install ropper --break-system-packages
+	pip install -U https://github.com/DissectMalware/pyOneNote/archive/master.zip --force --break-system-packages
 	pip3 install pypykatz --break-system-packages
+	pip3 install stegpy --break-system-packages
 	pip3 install defaultcreds-cheat-sheet --break-system-package
+	pip3 install kerbrute --break-system-packages
 	pip3 install stegoveritas --break-system-packages
 	stegoveritas_install_deps
 
@@ -82,18 +87,13 @@
 	cmake ..
 	make
 
-# Binaryninja
-	cd ~/tools/ctftools
-	curl -O https://cdn.binary.ninja/installers/binaryninja_free_linux.zip
-	unzip binaryninja_free_linux.zip
-
 # Stego
 	gem install zsteg
 
 # Audio stego
 	sudo apt-get install libboost-all-dev
 	git clone https://github.com/danielcardeenas/AudioStego.git
-	cd AudioStego
+	mv AudioStego audioStego && cd AudioStego
 	mkdir build && cd build
 	cmake ..
 	make

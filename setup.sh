@@ -1,31 +1,9 @@
 #!/bin/bash
 
-# Mejorar rendimiento
-	sudo echo '
-	vm.swappiness = 10
-	vm.vfs_cache_pressure = 50
-	vm.dirty_ratio = 3
-	vm.dirty_background_ratio = 5
-	vm.watermark_scale_factor = 200
-	vm.page-cluster = 3
-	vm.min_free_kbytes = 65536
-	vm.dirty_writeback_centisecs = 1500
-	vm.dirty_expire_centisecs = 3000
-	kernel.sched_latency_ns = 6000000
-	kernel.sched_min_granularity_ns = 750000
-	kernel.sched_wakeup_granularity_ns = 1000000
-	' > /etc/sysctl.conf 
-
-	sudo sysctl -p
-
 # Desinstalaciones
 	cd ~
 	sudo apt remove vim --purge
 	sudo apt remove nano --purge
-	pip uninstall impacket -y --break-system-packages
-	pip3 uninstall impacket -y --break-system-packages
-	sudo apt remove python3-impacket -y
-	sudo rm -rf .local/lib/python3.13/site-packages/impacket
 
 # Archivos de configuracion
 	cd ~
@@ -38,15 +16,11 @@
 
 	# Configuracion de wallpapers
 		mkdir -p wallpapers && cd wallpapers
-		
 		cp ~/tools/config_files/wallpapers/* .
 
 	# Configuracion de wallpaper en el login 
-		sudo mv /usr/share/backgrounds/kali/kali-maze-16x9.jpg /usr/share/backgrounds/kali/kali-maze-16x9-copy.jpg
-		sudo mv /usr/share/backgrounds/kali/login.svg /usr/share/backgrounds/kali/login-copy.svg
-
-		sudo cp 2.jpg /usr/share/backgrounds/kali/kali-maze-16x9.jpg
-		sudo cp 2.jpg /usr/share/backgrounds/kali/login.svg
+		sudo cp 6.jpg /usr/share/backgrounds/kali/kali-maze-16x9.jpg
+		sudo cp 6.jpg /usr/share/backgrounds/kali/login.svg
 
 # Documents directory
 	cd ~/Documents
@@ -61,8 +35,8 @@
 		git clone https://github.com/Yoswell/obsidian_notes.git
 
 # Configurar ZSH
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 	cd ~/.oh-my-zsh/custom/plugins
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 	git clone https://github.com/zsh-users/zsh-autosuggestions.git
 	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 
@@ -94,10 +68,7 @@
 	cp red.micro ~/.config/micro/colorschemes
 	cp kitty.conf ~/.config/kitty/kitty.conf
 
-	sudo cp -f rofi/config.rasi /usr/share/rofi/themes/custom.rasi
-	rm -r rofi
-
-	sudo find . -mindepth 1 -maxdepth 1 ! -name "Windows-10-Icons" -exec rm -rf {} +
+	sudo cp -f custom.rasi /usr/share/rofi/themes/custom.rasi
 
 # Instalar fuentes JetBrains Mono
 	mkdir -p ~/jetbrains

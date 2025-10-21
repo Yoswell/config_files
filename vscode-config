@@ -1,44 +1,27 @@
 {
-    "workbench.colorTheme": "Black Waves",
+    "workbench.colorTheme": "Bearded Theme Monokai Black",
     "editor.minimap.enabled": false,
-    "editor.fontSize": 13,
-    "editor.fontFamily": "JetBrains Mono ExtraBold",
+    "editor.fontFamily": "JetBrains Mono SemiBold",
     "editor.overviewRulerBorder": false,
     
-    "workbench.settings.applyToAllProfiles": [ ],
+    "workbench.settings.applyToAllProfiles": [
+        
+        
+    ],
 
     "workbench.colorCustomizations": {
-        "editor.background": "#060607",
-        "panel.background": "#060607",
-        "sideBar.background": "#060607",
-        "sideBar.border": "#101112",
-        "menu.background": "#060607",
+    
+    },
 
-        "titleBar.activeBackground": "#060607",
-        "titleBar.border": "#101112",
-
-        "statusBar.background": "#060607",
-        "activityBarBadge.background": "#060607",
-        "titleBar.inactiveBackground": "#060607",
-        "activityBar.background": "#060607",
-        "activityBarTop.background": "#060607",
-        "banner.background": "#060607",
-
-        "tab.activeBackground": "#09090a",
-        "tab.inactiveBackground": "#060607",
-        "statusBarItem.activeBackground":"#09090a",
-        "statusBarItem.inactiveBackground":"#060607",
-        "statusBar.border":"#101112",
-        "statusBarItem.hoverBackground":"#060607",
-
-        "scrollbarSlider.background": "#09090a",
-        "editorIndentGuide.background1": "#09090a",
-        "sideBarSectionHeader.border": "#000000"
+    "[csharp]": {
+        "editor.formatOnType": false
     },
 
     "editor.hover.enabled": false,
-
-    "workbench.tree.indent": 10,
+    "csharp.format.enable": false,
+    "editor.formatOnType": false,
+    "editor.formatOnSave": false,
+    "workbench.tree.indent": 15,
     "workbench.layoutControl.enabled": false,
     "editor.cursorBlinking": "expand",
     "editor.guides.indentation": false,
@@ -65,5 +48,17 @@
     "terminal.integrated.fontSize": 12,
     "chat.editor.fontSize": 11,
     "markdown.preview.fontSize": 12,
-    "editor.renderLineHighlight": "none"
+    "workbench.activityBar.location": "bottom",
+    "workbench.iconTheme": "let-icons",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.cursorStyleInactive": "line",
+    "terminal.integrated.cursorWidth": 2,
+    "editor.renderLineHighlight": "none",
+    "editor.matchBrackets": "never",
+    "editor.formatOnSaveMode": "modifications",
+    "dotnet.codeLens.enableReferencesCodeLens": false,
+    "terminal.integrated.stickyScroll.enabled": false,
+    "diffEditor.codeLens": true,
+    "editor.scrollbar.vertical": "hidden"
 }
